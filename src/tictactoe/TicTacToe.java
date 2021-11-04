@@ -43,7 +43,7 @@ public class TicTacToe {
             int moveState = o.move(player, row, col);
             o.displayBoard();
 
-            if (moveState != 0 && moveState != -2) {
+            if (moveState != 0) {
                 System.out.println("Winner is Player: " + moveState);
                 break;
             }
