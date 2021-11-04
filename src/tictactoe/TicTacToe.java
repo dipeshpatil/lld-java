@@ -13,6 +13,9 @@ public class TicTacToe {
     private int diagSum, revDiagSUm;
     private int winner;
 
+    /**
+     * @param n is the board size
+     */
     public TicTacToe(final int n) {
         this.n = n;
         board = new int[n][n];
@@ -81,16 +84,26 @@ public class TicTacToe {
         return getWinner();
     }
 
+    /**
+     * @return winner of the ongoing game
+     */
     public int getWinner() {
         return winner;
     }
 
+    /**
+     * @param n is the Current Player
+     * @return player, alternates player value. If 1 then 0 and vice-e-versa
+     */
     public int changePlayer(int n) {
         if (n == 1)
             return 0;
         return 1;
     }
 
+    /**
+     * Displays the Current State of the Board
+     */
     public void displayBoard() {
         System.out.println("=========");
         for (int[] row : board)
